@@ -9,9 +9,26 @@ const Header: React.FC = () => {
     <header className='flex justify-between py-4 px-9'>
       <Link to='/'><Logo /></Link>
       <nav className="flex gap-8 px-4 border-b-1">
-        <A className={location==='/'?'border-b-2':''} to='/'>{'<'}Projects{'/>'}</A>
-        <A className={location==='/stack'?'border-b-2':''} to='/stack'>Stack</A>
-        <A className={location==='/education'?'border-b-2':''} to='/education'>Education</A>
+        <A 
+          className={location==='/'?'border-b-2':''} 
+          to='/'>
+            {location==='/'?'<Projects />':'Projects'}
+          </A>
+        <A 
+        className={location==='/stack'?'border-b-2':''} 
+        to='/stack'>
+          {location==='/stack'?'<Stack />':'Stack'}
+        </A>
+        <A 
+        className={location==='/education'?'border-b-2':''} 
+        to='/education'>
+          {location==='/education'?'<Eductation />':'Education'}
+        </A>
+        <A 
+        className={location==='/experience'?'border-b-2':''} 
+        to='/experience'>
+          {location==='/experience'?'<Experience />':'Expecience'}
+        </A>
       </nav>
     </header>
   )

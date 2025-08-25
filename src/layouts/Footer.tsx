@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     <footer className="flex flex-col justify-between h-50 mt-10 p-5 border-t-2">
       <div className="flex gap-3 items-center">
         <Logo />
-        <Light>Carlos Gabriel Portfolio</Light>
+        <Light>Carlos Gabriel Developer</Light>
       </div>
       <div className="flex items-center justify-between px-8">
         <div className="flex gap-6">
@@ -19,7 +19,10 @@ const Footer: React.FC = () => {
         <div className="text-center w-fit">
           <Bold>Me envie um Email</Bold>
           <a href="#">
-            <Light className="hover:border-b-1">Carlosgabrieldesenvolvedor@gmail.com</Light>
+            <Light 
+            className="hover:drop-shadow-xl/50 drop-shadow-hlight-blue" >
+              Carlosgabrieldesenvolvedor@gmail.com
+            </Light>
           </a>
         </div>
       </div>
