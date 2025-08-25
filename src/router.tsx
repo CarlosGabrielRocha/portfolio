@@ -3,6 +3,7 @@ import RootLayout from "./layouts/RootLayout";
 import Projects from "./views/Projects";
 import Stack from "./views/Stack";
 import Education from "./views/Education";
+import Experience from "./views/Experience";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: 'education',
         element: <Education />
+      },
+      {
+        path: 'experience',
+        element: <Experience />
       }
     ]
   }
