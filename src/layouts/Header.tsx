@@ -6,13 +6,13 @@ const Header: React.FC = () => {
   const location = useLocation().pathname
 
   return (
-    <header className='flex justify-between py-4 px-9'>
+    <header className='flex justify-between py-6 px-9'>
       <Link to='/'><Logo /></Link>
       <nav className="flex gap-8 px-4 border-b-1">
         <A 
           className={location==='/'?'border-b-2':''} 
           to='/'>
-            {location==='/'?'<Projects />':'Projects'}
+            {location==='/'?'<Experience />':'Experience'}
           </A>
         <A 
         className={location==='/stack'?'border-b-2':''} 
@@ -23,11 +23,6 @@ const Header: React.FC = () => {
         className={location==='/education'?'border-b-2':''} 
         to='/education'>
           {location==='/education'?'<Eductation />':'Education'}
-        </A>
-        <A 
-        className={location==='/experience'?'border-b-2':''} 
-        to='/experience'>
-          {location==='/experience'?'<Experience />':'Expecience'}
         </A>
       </nav>
     </header>
