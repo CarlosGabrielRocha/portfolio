@@ -11,7 +11,7 @@ const Sphere: React.FC<SphereProps> = () => {
     <div className="sphere-container mx-auto">
       <div className="flex items-start justify-center sphere w-full h-screen bg-black">
         <Button className="mt-20">
-          <Icon src="/download-icon.svg" alt="download" />
+          <Icon src="/icons/download-icon.svg" alt="download" />
           Download CV
         </Button>
       </div>

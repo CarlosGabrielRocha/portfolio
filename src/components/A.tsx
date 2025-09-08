@@ -7,7 +7,7 @@ interface AProps {
   className?: string
 }
 
-export const A: React.FC<AProps> = ({ to, className, children }) => {
+export const A: React.FC<AProps> = ({ to, className='', children }) => {
   return (
       <Link className={`${className} hover:text-hlight-blue`} to={to}>
         {children}

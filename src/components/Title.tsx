@@ -1,15 +1,12 @@
-import type { ReactNode } from "react";
 import type React from "react";
+import type { DefaultProps } from "../types/defaultTypes";
 
-interface TitleProps {
-  children?: ReactNode
-  className?: string
-}
 
-const Title: React.FC<TitleProps> = (props) => {
+
+const Title: React.FC<DefaultProps> = ({ children, className='' }) => {
   return (
-    <h1 className={`font-zcool text-5xl ${props.className}`}>
-      {props.children}
+    <h1 className={`font-zcool text-5xl ${className}`}>
+      {children}
     </h1>
   )
 }

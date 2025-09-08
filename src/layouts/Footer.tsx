@@ -5,19 +5,19 @@ import { Logo } from "../components/Logo"
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col justify-between h-50 mt-10 p-5 border-t-2">
+    <footer className="flex flex-col justify-between gap-8 px-5 py-10 border-t-2">
       <div className="flex gap-3 items-center">
         <Logo />
         <Light>Carlos Gabriel Developer</Light>
       </div>
-      <div className="flex items-center justify-between px-8">
+      <div className="flex items-center justify-between p-8">
         <div className="flex gap-6">
-          <IconLink iconSrc="/instagram-icon.svg" href="#" alt="Instagram" />
-          <IconLink iconSrc="/whatsapp-icon.svg" href="#" alt="Whatsapp" />
-          <IconLink iconSrc="/github-icon.svg" href="#" alt="Github" />
+          <IconLink iconSrc="/icons/instagram-icon.svg" href="#" alt="Instagram" />
+          <IconLink iconSrc="/icons/whatsapp-icon.svg" href="#" alt="Whatsapp" />
+          <IconLink iconSrc="/icons/github-icon.svg" href="#" alt="Github" />
         </div>
         <div className="text-center w-fit">
-          <Bold>Me envie um Email</Bold>
+          <Bold className="mb-3">Me envie um Email</Bold>
           <a href="#">
             <Light 
             className="hover:drop-shadow-xl/50 drop-shadow-hlight-blue" >

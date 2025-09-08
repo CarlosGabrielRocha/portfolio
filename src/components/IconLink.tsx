@@ -8,11 +8,11 @@ interface IconLinkProps {
   className?: string
 }
 
-export const IconLink: React.FC<IconLinkProps> = (props) => {
+export const IconLink: React.FC<IconLinkProps> = ({href, iconSrc, alt, children, className=''}) => {
   return (
-    <a href={props.href} className={`w-6 ${props.className}`}>
-      <img className="hover:drop-shadow-xl/50 drop-shadow-hlight-blue" src={props.iconSrc} alt={props.alt} />
-      {props.children}
+    <a href={href} className={`w-6 ${className}`}>
+      <img className="hover:drop-shadow-xl/50 drop-shadow-hlight-blue" src={iconSrc} alt={alt} />
+      {children}
     </a>
   )
 }
