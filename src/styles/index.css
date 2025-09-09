@@ -42,9 +42,20 @@
   }
 }
 
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+:root {
+  --transparent-white: #ffffff05;
+}
+
 @theme {
   --color-darker-blue: #00050A;
   --color-hlight-blue: #2788E8;
+  --color-tranparent-white: var(--transparent-white);
 
   --drop-shadow-top: drop-shadow(0 -20rem 1rem #fff);
   --font-zcool: "ZCOOL XiaoWei", sans-serif;
@@ -59,6 +70,22 @@
   position: relative;
   clip-path: ellipse(68% 60% at 50% 65%);
   min-width: 50rem;
+}
+
+/* */
+
+.shadow-center {
+  box-shadow: 0px 0px 5px 5px#ffffff15;
+}
+
+.spread-shadow-center {
+  box-shadow: 0px 0px 100px 10px#ffffff15;
+}
+
+/* Animation class */
+
+.scroll {
+  animation: scroll 15s linear infinite;
 }
 
 

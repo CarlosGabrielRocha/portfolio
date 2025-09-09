@@ -1,10 +1,10 @@
 import { LandscapeCard, LandscapeText, LandscapeTitle } from "../components/LandscapeCard"
-import SecondTitle from "../components/SecondTitle"
+import SilverTitle from "../components/SilverTitle"
 
 const Experience: React.FC = () => {
   return (
     <div className="w-full">
-      <SecondTitle className="text-center">{'<Experience />'}</SecondTitle>
+      <SilverTitle className="text-center">{'<Experience />'}</SilverTitle>
       <div className="flex flex-col gap-20 items-center justify-center mt-20">
       <a href="#">
         <LandscapeCard 

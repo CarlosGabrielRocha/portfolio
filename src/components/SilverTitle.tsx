@@ -1,6 +1,6 @@
 import type { DefaultProps } from "../types/defaultTypes"
 
-const SecondTitle: React.FC<DefaultProps> = ({ children, className='' }) => {
+const SilverTitle: React.FC<DefaultProps> = ({ children, className='' }) => {
   return (
     <h1 className={
       `font-zcool text-5xl bg-clip-text text-transparent bg-gradient-to-br from-white to-gray-300 
@@ -11,4 +11,4 @@ const SecondTitle: React.FC<DefaultProps> = ({ children, className='' }) => {
   )
 }
 
-export default SecondTitle
+export default SilverTitle

@@ -2,9 +2,13 @@ import type React from "react";
 import type { DefaultProps } from "../types/defaultTypes";
 import Icon from "./Icon";
 
-export type BadgeType = 'js' | 'react' | 'node' | 'prisma' | 'ts' | 'css' | 'express' | 'next' | 'html' | 'bootstrap' | 'github' | 'git' | 'postgresql'
+export type BadgeType = 'js' | 'react' | 'node' | 'prisma' | 'ts' | 'css' | 'express' | 'next' | 'html' | 'bootstrap' | 'github' | 'git' | 'postgresql' | 'tailwind'
 
-const badgeProps = {
+type BadgePropsType = { 
+  [key: string]: { iconSrc: string, alt: string, shadowColor: string, background: string }
+}
+
+const badgeProps: BadgePropsType = {
   js: { iconSrc: '/icons/javascript-icon.svg', alt: 'javascript', shadowColor: 'shadow-amber-300', background: 'bg-amber-300/5' },
   react: { iconSrc: '/icons/react-icon.svg', alt: 'react', shadowColor: 'shadow-cyan-300', background: 'bg-cyan-300/5' },
   node: { iconSrc: '/icons/nodejs-icon.svg', alt: 'nodejs', shadowColor: 'shadow-green-300', background: 'bg-green-300/5' },
@@ -17,20 +21,25 @@ const badgeProps = {
   bootstrap: { iconSrc: '/icons/bootstrap-icon.svg', alt: 'bootstrap', shadowColor: 'shadow-violet-500', background: 'bg-violet-500/5' },
   github: { iconSrc: '/icons/github-icon.svg', alt: 'github', shadowColor: 'shadow-white', background: 'bg-white/5' },
   git: { iconSrc: '/icons/git-icon.svg', alt: 'git', shadowColor: 'shadow-red-500', background: 'bg-red-500/5' },
-  postgresql: { iconSrc: '/icons/postgresql-icon.svg', alt: 'postgresql', shadowColor: 'shadow-blue-700', background: 'bg-blue-700/5' }
+  postgresql: { iconSrc: '/icons/postgresql-icon.svg', alt: 'postgresql', shadowColor: 'shadow-blue-700', background: 'bg-blue-700/5' },
+  tailwind: { iconSrc: '/icons/tailwindcss-icon.svg', alt: 'tailwind', shadowColor: 'shadow-cyan-400', background: 'bg-cyan-400/5'}
 }
+
 
 interface BadgeProps extends DefaultProps {
-  type: BadgeType
+  type: BadgeType,
+  size?: 'small' | 'medium' | 'big'
 }
 
-export const Badge: React.FC<BadgeProps> = ({ type, className='' }) => {
+export const Badge: React.FC<BadgeProps> = ({ type, size, className='' }) => {
   const badge = badgeProps[type]
-  className += ` ${badge.background} ${badge.shadowColor}`
-  const styles = `px-2 py-2 shadow-sm rounded-md ${className}`
+  
+  const shadow = size==='big'?'shadow-md':'shadow-sm'
+  const styles = `px-2 py-2 rounded-md ${badge.background} ${badge.shadowColor} ${shadow} ${className}`
+  
   return (
     <div className={styles}>
-      <Icon size="small" src={badge.iconSrc} alt={badge.alt} />
+      <Icon size={size} src={badge.iconSrc} alt={badge.alt} />
     </div>
   )
 }
