@@ -3,7 +3,7 @@ import { LandscapeCard, LandscapeText, LandscapeTitle } from "../../components/L
 
 const ExperienceCards: React.FC = () => {
   return (
-    <div className="flex flex-col gap-20 items-center justify-center mt-20">
+    <div className="flex flex-col gap-20 items-center justify-center w-full mt-20">
       
       <ModalTrigger modalProps={
         {
@@ -32,7 +32,6 @@ const ExperienceCards: React.FC = () => {
         </LandscapeCard>
       </ModalTrigger>
  
-      <a href="#">
         <LandscapeCard 
           imgSrc="/images/real-state-figma.png" 
           imgAlt="projeto corretor"
@@ -42,8 +41,8 @@ const ExperienceCards: React.FC = () => {
           <LandscapeText>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut consequuntur fuga quis nam magni incidunt, corrupti ullam, recusandae accusamus impedit, porro earum blanditiis architecto. Ipsam ipsa harum velit amet blanditiis?     
           </LandscapeText>
         </LandscapeCard>
-      </a>
-      <a href="#">
+
+
         <LandscapeCard 
           imgSrc="/images/placeholder-image.webp" 
           imgAlt="projeto corretor"
@@ -53,7 +52,6 @@ const ExperienceCards: React.FC = () => {
           <LandscapeText>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut consequuntur fuga quis nam magni incidunt, corrupti ullam, recusandae accusamus impedit, porro earum blanditiis architecto. Ipsam ipsa harum velit amet blanditiis?     
           </LandscapeText>
         </LandscapeCard>
-      </a>
     </div>
   )
 }

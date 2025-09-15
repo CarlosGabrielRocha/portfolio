@@ -12,7 +12,7 @@ const ModalFooter: React.FC<ModalFooterProps> = ({ sourceCodeHref }) => {
   return (
     <div className="modal-footer flex justify-between py-3 px-4">
       <div className="flex gap-3 items-center">
-        <p>Source Code</p>
+        <p className="text-xs md:text-sm">Source Code</p>
         <Icon src="/icons/github-icon.svg" alt="github" />
       </div>
       <a 
