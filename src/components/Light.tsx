@@ -5,10 +5,10 @@ interface LightProps {
   className?: string
 }
 
-export const Light: React.FC<LightProps> = (props) => {
+export const Light: React.FC<LightProps> = ({ children, className='' }) => {
   return (
-    <p className={`font-light ${props.className}`}>
-      {props.children}
+    <p className={`font-light ${className}`}>
+      {children}
     </p>
   )
 }

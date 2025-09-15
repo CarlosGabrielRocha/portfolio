@@ -5,11 +5,11 @@ interface LogoProps {
   children?: ReactNode
 }
 
-export const Logo: React.FC<LogoProps> = (props) => {
+export const Logo: React.FC<LogoProps> = ({ children, className='' }) => {
   return (
-    <h1 className={`font-zcool text-4xl ${props.className}`}>
+    <h1 className={`font-zcool text-4xl ${className}`}>
       CG
-      {props.children}
+      {children}
     </h1>
   )
 }
