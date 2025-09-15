@@ -34,7 +34,7 @@ const ExperienceCards: React.FC = () => {
  
       <a href="#">
         <LandscapeCard 
-          imgSrc="/images/placeholder-image.webp" 
+          imgSrc="/images/real-state-figma.png" 
           imgAlt="projeto corretor"
           badges={['css', 'html', 'js', 'git', 'prisma']}
         >

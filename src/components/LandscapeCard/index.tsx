@@ -24,7 +24,7 @@ const LandscapeCard: React.FC<LandscapeProps> = ({ children, className, badges, 
           </div>
         </LandscapeContent>
         <div className="flex-1 h-full my-auto shadow-3">
-          <img src={imgSrc} alt={imgAlt} />
+          <img className="h-40 w-full object-cover" src={imgSrc} alt={imgAlt} />
         </div>
     </div>
   )
