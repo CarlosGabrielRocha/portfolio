@@ -1,14 +1,28 @@
-import { LandscapeCard, LandscapeText, LandscapeTitle } from "../components/LandscapeCard"
-import SilverTitle from "../components/SilverTitle"
+import { ModalTrigger } from "../../components/Modal/ModalTrigger"
+import { LandscapeCard, LandscapeText, LandscapeTitle } from "../../components/LandscapeCard"
 
-const Experience: React.FC = () => {
+const ExperienceCards: React.FC = () => {
   return (
-    <div className="w-full">
-      <SilverTitle className="text-center">{'<Experience />'}</SilverTitle>
-      <div className="flex flex-col gap-20 items-center justify-center mt-20">
-      <a href="#">
+    <div className="flex flex-col gap-20 items-center justify-center mt-20">
+      
+      <ModalTrigger modalProps={
+        {
+          name: 'Real State Project',
+          deploy: { 
+            imgSrc: '/images/real-state-deploy.png', 
+            imgAlt: 'Projeto Corretor',
+            href: 'https://carlosgabrielrocha.github.io/projeto-corretor/dist/index'
+          },
+          planning: {
+            imgSrc: '/images/real-state-figma.png', 
+            imgAlt: 'Projeto Corretor',
+            href: 'https://www.figma.com'            
+          },
+          sourceCodeHref: 'https://github.com/CarlosGabrielRocha/projeto-corretor'
+        }
+      }>
         <LandscapeCard 
-          imgSrc="/images/placeholder-image.webp" 
+          imgSrc="/images/real-state-deploy.png" 
           imgAlt="projeto corretor"
           badges={['bootstrap', 'ts', 'express', 'node', 'prisma']}
         >
@@ -16,7 +30,8 @@ const Experience: React.FC = () => {
           <LandscapeText>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut consequuntur fuga quis nam magni incidunt, corrupti ullam, recusandae accusamus impedit, porro earum blanditiis architecto. Ipsam ipsa harum velit amet blanditiis?     
           </LandscapeText>
         </LandscapeCard>
-      </a>
+      </ModalTrigger>
+ 
       <a href="#">
         <LandscapeCard 
           imgSrc="/images/placeholder-image.webp" 
@@ -39,9 +54,8 @@ const Experience: React.FC = () => {
           </LandscapeText>
         </LandscapeCard>
       </a>
-      </div>
     </div>
   )
 }
 
-export default Experience
+export default ExperienceCards

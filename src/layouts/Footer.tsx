@@ -1,5 +1,5 @@
 import { Bold } from "../components/Bold"
-import { IconLink } from "../components/IconLink"
+import { IconLink } from "../components/icons/IconLink"
 import { Light } from "../components/Light"
 import { Logo } from "../components/Logo"
 

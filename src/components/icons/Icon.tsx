@@ -12,11 +12,12 @@ enum IconSize {
 }
 
 const Icon: React.FC<IconProps> = ({ src, alt, size, className='' }) => {
-  if (!size) className += ` ${IconSize.small}`
-    else className = ` ${IconSize[size]}`
+  let width: string 
+  if (!size) width = IconSize.small
+    else width = IconSize[size]
 
   return (
-    <img className={`${className}`} src={src} alt={alt} />
+    <img className={`${width} ${className}`} src={src} alt={alt} />
   )
 }
 

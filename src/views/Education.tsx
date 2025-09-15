@@ -1,5 +1,5 @@
 import SilverTitle from "../components/SilverTitle"
-import { Timeline, TimelineDate, TimelineText, TimelineTitle } from "../components/TimeLine"
+import { Timeline, TimelineDate, TimelineText, TimelineTitle } from "../components/Timeline"
 
 const Education: React.FC = () => {
   return (

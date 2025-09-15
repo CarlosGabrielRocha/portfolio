@@ -1,6 +1,6 @@
 import type React from "react";
 import type { DefaultProps } from "../types/defaultTypes";
-import Icon from "./Icon";
+import Icon from "./icons/Icon";
 
 export type BadgeType = 'js' | 'react' | 'node' | 'prisma' | 'ts' | 'css' | 'express' | 'next' | 'html' | 'bootstrap' | 'github' | 'git' | 'postgresql' | 'tailwind'
 
