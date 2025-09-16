@@ -7,7 +7,7 @@ interface BoldProps {
 
 export const Bold: React.FC<BoldProps> = ({ children, className='' }) => {
   return (
-    <h1 className={`font-medium ${className}`}>
+    <h1 className={`font-medium text-xs sm:text-sm md:text-md 2xl:text-lg ${className}`}>
       {children}
     </h1>
   )
