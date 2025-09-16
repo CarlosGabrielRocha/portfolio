@@ -13,7 +13,7 @@ export interface ModalBodyProps {
 
 export const ModalBody: React.FC<ModalBodyProps> = ({ deploy, planning }) => {
   return (
-    <div className="flex justify-between items-center gap-1 w-full h-65 md:h-80 2xl:h-95 bg-gradient-to-br from-hlight-blue/25 to-darker-blue/70 to-70% shadow-xl/24">
+    <div className="flex justify-between items-center gap-1 w-full h-55 sm:h-65 md:h-80 2xl:h-95 bg-gradient-to-br from-hlight-blue/25 to-darker-blue/70 to-70% shadow-xl/24">
       <ModalBodyArea
         imgSrc={planning?.imgSrc}
         imgAlt={planning?.imgAlt}
@@ -36,7 +36,7 @@ export const ModalBody: React.FC<ModalBodyProps> = ({ deploy, planning }) => {
 const ModalBodyArea: React.FC<ModalBodyAreaProps> = ({ imgSrc, imgAlt, href, children }) => {
 
   return (
-    <div className="flex-1 flex flex-col gap-3 items-center px-0 md:px-10">
+    <div className="flex-1 flex flex-col gap-3 items-center md:px-10">
       <h2 className="font-zcool pb-5 py-1 text-2xl sm:text-3xl lg:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-white from-40% to-gray-700 drop-shadow-lg/50">
         {children}
       </h2>

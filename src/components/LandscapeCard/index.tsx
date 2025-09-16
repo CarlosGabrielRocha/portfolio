@@ -1,6 +1,7 @@
 import type { DefaultProps } from "../../types/defaultTypes"
 import { Badge, type BadgeType } from "../Badge"
 import { Bold } from "../Bold"
+import { Light } from "../Light"
 
 interface LandscapeProps extends DefaultProps {
   badges?: BadgeType[],
@@ -8,13 +9,13 @@ interface LandscapeProps extends DefaultProps {
   imgAlt: string
 }
 
-const LandscapeCard: React.FC<LandscapeProps> = ({ children, className, badges, imgSrc, imgAlt }) => {
-  const styles = `flex gap-4 p-10 bg-black/30 shadow-sm shadow-black hover:bg-gradient-to-br hover:from-white/5 hover:to-hlight-blue/5 hover:outline hover:shadow-white/15 hover:shadow-md backdrop-blur-lg rounded-2xl ${className}`
+const LandscapeCard: React.FC<LandscapeProps> = ({ children, className='', badges, imgSrc, imgAlt }) => {
+  const styles = `flex flex-col sm:flex-row gap-6 py-6 px-3 sm:p-10 max-w-sm sm:max-w-3xl bg-black/30 shadow-white/5 shadow-lg hover:bg-gradient-to-br hover:from-white/5 hover:to-hlight-blue/35 backdrop-blur-lg rounded-2xl hover:outline outline-white/40 hover:**:opacity-100 ${className}`
   return (
     <div className={styles}>
         <LandscapeContent>
           { children }
-          <div className="flex gap-3 justify-end px-7">
+          <div className="flex gap-3 sm:self-end sm:py-2 sm:px-5">
             { badges &&
               badges.map(badge => {
                 const key = Math.floor(Math.random() * 1000000)
@@ -23,26 +24,34 @@ const LandscapeCard: React.FC<LandscapeProps> = ({ children, className, badges, 
             }
           </div>
         </LandscapeContent>
-        <div className="flex-1 h-full my-auto shadow-3">
-          <img className="h-40 w-full object-cover" src={imgSrc} alt={imgAlt} />
+        <div className="max-sm:order-1 flex-1 h-full w-6/10 sm:w-full my-auto mx-auto shadow-3">
+          <img className="h-full w-full object-cover opacity-50 drop-shadow-lg/15" src={imgSrc} alt={imgAlt} />
         </div>
     </div>
   )
 }
 
-const LandscapeContent: React.FC<DefaultProps> = ({ children, className }) => {
+const LandscapeContent: React.FC<DefaultProps> = ({ children, className='' }) => {
   return (
-    <div className={`flex flex-col flex-2 gap-4 w-full ${className}`}>{children}</div>
+    <div 
+      className={`flex flex-col max-sm:items-center flex-2 max-sm:order-2 gap-6 ${className}`}
+    >
+      {children}
+    </div>
   )
 }
 
-const LandscapeText: React.FC<DefaultProps> = ({ children, className }) => {
+const LandscapeText: React.FC<DefaultProps> = ({ children, className='' }) => {
   return (
-    <p className={`font-light ${className}`}>{children}</p>
+    <Light 
+      className={`max-sm:text-[0.6rem] max-sm:text-center ${className}`}
+    >
+      {children}
+    </Light>
   )
 }
 
-const LandscapeTitle: React.FC<DefaultProps> = ({ children, className }) => {
+const LandscapeTitle: React.FC<DefaultProps> = ({ children, className='' }) => {
   return (
     <Bold className={className}>{children}</Bold>
   )

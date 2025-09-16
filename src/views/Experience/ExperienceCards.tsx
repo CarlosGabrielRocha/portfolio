@@ -3,7 +3,7 @@ import { LandscapeCard, LandscapeText, LandscapeTitle } from "../../components/L
 
 const ExperienceCards: React.FC = () => {
   return (
-    <div className="flex flex-col gap-20 items-center justify-center mt-20 overflow-x-hidden">
+    <div className="flex flex-col gap-20 items-center justify-center mt-20">
       
       <ModalTrigger modalProps={
         {
@@ -21,7 +21,7 @@ const ExperienceCards: React.FC = () => {
           sourceCodeHref: 'https://github.com/CarlosGabrielRocha/projeto-corretor'
         }
       }
-      className="max-w-3xl w-9/10"
+      
       >
         <LandscapeCard 
           imgSrc="/images/real-state-deploy.png" 
@@ -49,7 +49,6 @@ const ExperienceCards: React.FC = () => {
           sourceCodeHref: 'https://github.com/CarlosGabrielRocha/projeto-corretor'
         }
       }
-      className="max-w-3xl w-9/10"
       >
         <LandscapeCard 
           imgSrc="/images/real-state-deploy.png" 
@@ -78,7 +77,6 @@ const ExperienceCards: React.FC = () => {
           sourceCodeHref: 'https://github.com/CarlosGabrielRocha/projeto-corretor'
         }
       }
-      className="w-9/10 max-w-3xl"
       >
         <LandscapeCard 
           imgSrc="/images/real-state-deploy.png" 
