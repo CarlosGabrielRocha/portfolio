@@ -2,7 +2,7 @@ import type React from "react"
 import type { DefaultProps } from "../types/defaultTypes"
 import { Bold } from "./Bold"
 
-const Timeline: React.FC<DefaultProps> = ({ className, children }) => {
+const Timeline: React.FC<DefaultProps> = ({ className='', children }) => {
   return (
     <div className={`relative max-w-3xl ${className}`}>
       <div className="absolute left-[-1rem] w-[0.1rem] h-full bg-white/50"></div>
@@ -13,7 +13,7 @@ const Timeline: React.FC<DefaultProps> = ({ className, children }) => {
   )
 }
 
-const TimelineTitle: React.FC<DefaultProps> = ({ className, children }) => {
+const TimelineTitle: React.FC<DefaultProps> = ({ className='', children }) => {
   return (
     <li className={`flex items-center gap-4 ${className}`}>
       <span className="w-3 h-3 rounded-full bg-white"></span>
@@ -22,7 +22,7 @@ const TimelineTitle: React.FC<DefaultProps> = ({ className, children }) => {
   )
 }
 
-const TimelineText: React.FC<DefaultProps> = ({ className, children }) => {
+const TimelineText: React.FC<DefaultProps> = ({ className='', children }) => {
   return (
     <li className={`flex items-center gap-4 ml-5 ${className}`}>
       <span className="block w-2 h-2 rounded-full bg-white"></span>

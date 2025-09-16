@@ -1,7 +1,7 @@
-import { Bold } from "../components/Bold"
-import { IconLink } from "../components/icons/IconLink"
-import { Light } from "../components/Light"
-import { Logo } from "../components/Logo"
+import { Bold } from "../../components/Bold"
+import { IconLink } from "../../components/icons/IconLink"
+import { Light } from "../../components/Light"
+import { Logo } from "../../components/Logo"
 
 const Footer: React.FC = () => {
   return (
