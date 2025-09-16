@@ -12,7 +12,7 @@ const RootLayout: React.FC = () => {
       <main>
         <MyParticles />
         <PresentationSection /> 
-        {/* <AboutSection /> */}
+        <AboutSection />
 {/*         <section className="py-20 w-full backdrop-blur-xs shadow-xl/8 shadow-white bg-white/0.5 border-t-3">
           <Outlet />
         </section> */}
