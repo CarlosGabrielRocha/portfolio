@@ -9,7 +9,9 @@ interface AProps {
 
 export const A: React.FC<AProps> = ({ to, className='', children }) => {
   return (
-      <Link className={`${className} hover:text-hlight-blue`} to={to}>
+      <Link 
+        className={`${className} hover:text-hlight-blue`} 
+        to={to}>
         {children}
       </Link>
   )

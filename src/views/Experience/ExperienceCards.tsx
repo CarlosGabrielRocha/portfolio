@@ -20,7 +20,9 @@ const ExperienceCards: React.FC = () => {
           },
           sourceCodeHref: 'https://github.com/CarlosGabrielRocha/projeto-corretor'
         }
-      }>
+      }
+      
+      >
         <LandscapeCard 
           imgSrc="/images/real-state-deploy.png" 
           imgAlt="projeto corretor"
@@ -31,29 +33,61 @@ const ExperienceCards: React.FC = () => {
           </LandscapeText>
         </LandscapeCard>
       </ModalTrigger>
- 
-      <a href="#">
+      <ModalTrigger modalProps={
+        {
+          name: 'Real State Project',
+          deploy: { 
+            imgSrc: '/images/real-state-deploy.png', 
+            imgAlt: 'Projeto Corretor',
+            href: 'https://carlosgabrielrocha.github.io/projeto-corretor/dist/index'
+          },
+          planning: {
+            imgSrc: '/images/real-state-figma.png', 
+            imgAlt: 'Projeto Corretor',
+            href: 'https://www.figma.com'            
+          },
+          sourceCodeHref: 'https://github.com/CarlosGabrielRocha/projeto-corretor'
+        }
+      }
+      >
         <LandscapeCard 
-          imgSrc="/images/placeholder-image.webp" 
+          imgSrc="/images/real-state-deploy.png" 
           imgAlt="projeto corretor"
-          badges={['css', 'html', 'js', 'git', 'prisma']}
+          badges={['bootstrap', 'ts', 'express', 'node', 'prisma']}
         >
           <LandscapeTitle>Projeto Corretor</LandscapeTitle>
           <LandscapeText>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut consequuntur fuga quis nam magni incidunt, corrupti ullam, recusandae accusamus impedit, porro earum blanditiis architecto. Ipsam ipsa harum velit amet blanditiis?     
           </LandscapeText>
         </LandscapeCard>
-      </a>
-      <a href="#">
+      </ModalTrigger>
+
+      <ModalTrigger modalProps={
+        {
+          name: 'Real State Project',
+          deploy: { 
+            imgSrc: '/images/real-state-deploy.png', 
+            imgAlt: 'Projeto Corretor',
+            href: 'https://carlosgabrielrocha.github.io/projeto-corretor/dist/index'
+          },
+          planning: {
+            imgSrc: '/images/real-state-figma.png', 
+            imgAlt: 'Projeto Corretor',
+            href: 'https://www.figma.com'            
+          },
+          sourceCodeHref: 'https://github.com/CarlosGabrielRocha/projeto-corretor'
+        }
+      }
+      >
         <LandscapeCard 
-          imgSrc="/images/placeholder-image.webp" 
+          imgSrc="/images/real-state-deploy.png" 
           imgAlt="projeto corretor"
-          badges={['bootstrap', 'next', 'postgresql', 'node', 'github']}
+          badges={['bootstrap', 'ts', 'express', 'node', 'prisma']}
         >
           <LandscapeTitle>Projeto Corretor</LandscapeTitle>
           <LandscapeText>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut consequuntur fuga quis nam magni incidunt, corrupti ullam, recusandae accusamus impedit, porro earum blanditiis architecto. Ipsam ipsa harum velit amet blanditiis?     
           </LandscapeText>
         </LandscapeCard>
-      </a>
+      </ModalTrigger>      
     </div>
   )
 }

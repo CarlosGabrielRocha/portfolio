@@ -17,13 +17,13 @@ interface ModalTriggerProps extends DefaultProps {
   modalProps: ModalProps
 }
 
-export const ModalTrigger: React.FC<ModalTriggerProps> = ({ modalProps, children }) => {
+export const ModalTrigger: React.FC<ModalTriggerProps> = ({ modalProps, children, className }) => {
   const [visible, setVisible] = useState(false)
 
   return (
     <ModalContext.Provider value={{ visible, setVisible, modalProps }}>
-      <div className="cursor-pointer" onClick={() => setVisible(true)}>
-      {children}
+      <div className={`cursor-pointer w-fit ${className}`} onClick={() => setVisible(true)}>
+        {children}
       </div>
         {visible &&
           createPortal(

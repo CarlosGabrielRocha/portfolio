@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
-import Button from "./Button"
-import Icon from "./icons/Icon"
+import Button from "../../components/Button"
+import Icon from "../../components/icons/Icon"
 
 interface SphereProps {
   children?: ReactNode
@@ -8,9 +8,9 @@ interface SphereProps {
 
 const Sphere: React.FC<SphereProps> = () => {
   return (
-    <div className="sphere-container mx-auto">
-      <div className="flex items-start justify-center sphere w-full h-screen bg-black">
-        <Button className="mt-20">
+    <div className="sphere-container w-full">
+      <div className="sphere flex items-start justify-center h-screen bg-black">
+        <Button className="mt-20 max-md:text-xs 2xl:text-lg">
           <Icon src="/icons/download-icon.svg" alt="download" />
           Download CV
         </Button>

@@ -8,7 +8,7 @@ interface CardContentProps extends DefaultProps {
 
 const CardContent: React.FC<CardContentProps> = ({ children, className, btnProps }) => {
   return (
-    <div className={`flex flex-col items-center text-xs gap-5 font-light ${className}`}>
+    <div className={`flex flex-col items-center text-xs 2xl:text-md gap-5 font-light ${className}`}>
       { children }
       <a href={btnProps.href} target="brank">
         <Button className="py-1 text-xs drop-shadow-2xl/60 drop-shadow-white">View</Button>
@@ -19,7 +19,7 @@ const CardContent: React.FC<CardContentProps> = ({ children, className, btnProps
 
 const CardText: React.FC<DefaultProps> = ({ children, className }) => {
   return (
-    <p className={`px-5 py-7 bg-darker-blue/50 ${className}`}>
+    <p className={`px-3 py-4 md:px-5 md:py-7 bg-darker-blue/50 ${className}`}>
       { children }
     </p>
   )

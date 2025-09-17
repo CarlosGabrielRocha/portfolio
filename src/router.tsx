@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import RootLayout from "./layouts/RootLayout";
 import Stack from "./views/Stack";
 import Education from "./views/Education";
 import Experience from "./views/Experience";
+import RootLayout from "./layouts/RootLayout";
 
 const router = createBrowserRouter([
   {

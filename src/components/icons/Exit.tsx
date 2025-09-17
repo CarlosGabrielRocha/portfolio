@@ -8,7 +8,7 @@ interface ExitProps extends DefaultProps {
 const Exit: React.FC<ExitProps> = ({ className, action }) => {
   return (
     <img
-      className={`cursor-pointer hover:opacity-85 w-6 ${className}`} 
+      className={`cursor-pointer hover:opacity-85 w-4 md:w-6 2xl:w-8 ${className}`} 
       src="/icons/close-icon.svg" 
       alt="close"
       onClick={action}

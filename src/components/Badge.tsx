@@ -35,7 +35,7 @@ export const Badge: React.FC<BadgeProps> = ({ type, size, className='' }) => {
   const badge = badgeProps[type]
   
   const shadow = size==='big'?'shadow-md':'shadow-sm'
-  const styles = `px-2 py-2 rounded-md ${badge.background} ${badge.shadowColor} ${shadow} ${className}`
+  const styles = `flex items-center justify-center p-1 sm:p-2 rounded-sm sm:rounded-md ${badge.background} ${badge.shadowColor} ${shadow} ${className}`
   
   return (
     <div className={styles}>
