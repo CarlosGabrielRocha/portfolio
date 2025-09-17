@@ -3,11 +3,11 @@ import { Timeline, TimelineDate, TimelineText, TimelineTitle } from "../componen
 
 const Education: React.FC = () => {
   return (
-    <div className="w-full">
+    <div className="flex flex-col gap-18 w-full">
       <SilverTitle className="text-center">
         {'<Education />'}
       </SilverTitle>
-      <div className="flex flex-col gap-20 w-full p-20">
+      <div className="flex flex-col gap-20 w-full ps-8  sm:ps-20">
         <Timeline>
           <TimelineTitle>Análise e Desenvolvimento de Sistemas</TimelineTitle>
           <TimelineText>

@@ -1,6 +1,7 @@
 import type React from "react"
 import type { DefaultProps } from "../types/defaultTypes"
 import { Bold } from "./Bold"
+import { Light } from "./Light"
 
 const Timeline: React.FC<DefaultProps> = ({ className='', children }) => {
   return (
@@ -26,9 +27,9 @@ const TimelineText: React.FC<DefaultProps> = ({ className='', children }) => {
   return (
     <li className={`flex items-center gap-4 ml-5 ${className}`}>
       <span className="block w-2 h-2 rounded-full bg-white"></span>
-      <p className="font-extralight w-5/6">
+      <Light className="w-5/6">
         {children}
-      </p>
+      </Light>
     </li>
   )
 }
@@ -37,7 +38,7 @@ const TimelineDate: React.FC<DefaultProps> = ({ className, children }) => {
   return (
     <li className={`flex items-center gap-4 ml-5 ${className}`}>
       <span className="w-2 h-2 rounded-full bg-white"></span>
-      <p className="text-sm">{children}</p>
+      <p className="text-xs sm:text-sm md:text-md 2xl:text-lg">{children}</p>
     </li>
   )
 }
