@@ -10,7 +10,7 @@ interface LandscapeProps extends DefaultProps {
 }
 
 const LandscapeCard: React.FC<LandscapeProps> = ({ children, className='', badges, imgSrc, imgAlt }) => {
-  const styles = `flex flex-col sm:flex-row gap-6 py-6 px-3 sm:p-10 max-w-sm sm:max-w-3xl bg-black/30 shadow-white/5 shadow-lg hover:bg-gradient-to-br hover:from-white/5 hover:to-hlight-blue/35 backdrop-blur-lg rounded-2xl hover:outline outline-white/40 hover:**:opacity-100 ${className}`
+  const styles = `flex flex-col sm:flex-row gap-6 py-6 px-3 sm:p-10 max-w-sm sm:max-w-3xl 2xl:max-w-4xl bg-black/30 shadow-white/5 shadow-lg hover:bg-gradient-to-br hover:from-white/5 hover:to-hlight-blue/35 backdrop-blur-lg rounded-2xl hover:outline outline-white/40 hover:**:opacity-100 ${className}`
   return (
     <div className={styles}>
         <LandscapeContent>

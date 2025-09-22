@@ -44,7 +44,7 @@ const ModalBodyArea: React.FC<ModalBodyAreaProps> = ({ imgSrc, imgAlt, href, chi
         {imgSrc && href &&
           <a href={href} target="_brank" className="w-full h-full">
             <img
-              className="w-full h-full opacity-50 hover:opacity-100 object-cover"
+              className="w-full h-full opacity-50 grayscale hover:grayscale-0 hover:opacity-100 object-cover"
               src={imgSrc}
               alt={imgAlt}
             />

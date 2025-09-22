@@ -55,7 +55,7 @@ const MyParticles: React.FC = () => {
             default: OutMode.out,
           },
           random: false,
-          speed: 0.3,
+          speed: 0.2,
           straight: true,
         },
         number: {
@@ -65,7 +65,7 @@ const MyParticles: React.FC = () => {
           value: 10,
         },
         opacity: {
-          value: .7,
+          value: .6,
         },
         shape: {
           type: "circle",

@@ -4,7 +4,7 @@ import Modal from "./Index"
 import type { DefaultProps } from "../../types/defaultTypes"
 import ModalContext from "../../contexts/ModalContext"
 import type { ModalBodyAreaProps } from "./ModalBody"
-import BlurBackground from "../BlurBackground"
+import BlurBackground from "./BlurBackground"
 
 export interface ModalProps {
   name: string,
@@ -28,8 +28,9 @@ export const ModalTrigger: React.FC<ModalTriggerProps> = ({ modalProps, children
         {visible &&
           createPortal(
             <>
-              <BlurBackground clickHandler={() => setVisible(false)} />
-              <Modal />
+              <BlurBackground clickHandler={() => setVisible(false)}>
+                <Modal />
+              </BlurBackground>
             </>,
             document.body
           )
