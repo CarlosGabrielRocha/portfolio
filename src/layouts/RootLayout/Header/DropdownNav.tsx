@@ -19,7 +19,7 @@ const DropdownNav: React.FC = () => {
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger className="block md:hidden cursor-pointer outline-none">
         <div
-          className="rounded-full bg-darker-blue shadow-md shadow-hlight-blue w-fit p-2"
+          className="rounded-full bg-darker-blue shadow-md shadow-hlight-blue hover:shadow-md/30 w-fit p-2"
           aria-label="Navigation Menu"
         >
           <Icon
