@@ -9,8 +9,8 @@ const Modal: React.FC<DefaultProps> = () => {
   const { modalProps } = useContext(ModalContext)
   const { name, planning, deploy, sourceCodeHref } = modalProps
   return (
-    <div className={`fixed top-10 flex flex-col w-9/10 max-w-3xl 2xl:max-w-4xl text-center rounded-2xl border-1 border-white/10 bg-darker-blue/90 backdrop-blur-xs`}>
-
+    <div className={`flex flex-col w-9/10 max-w-3xl 2xl:max-w-4xl text-center rounded-2xl border-1 border-white/10 bg-darker-blue/90 backdrop-blur-xs`}>
+    
       <ModalHeader>{name}</ModalHeader>
 
       <ModalBody
