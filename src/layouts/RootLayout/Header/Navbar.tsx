@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   const location = useLocation().pathname
 
   return (
-    <nav className="hidden md:flex gap-8 px-4 text-md 2xl:text-lg border-b-1">
+    <nav className="hidden md:flex gap-8 px-4 text-md 2xl:text-lg border-b-1 border-white/40">
       <A
         className={location === '/' ? 'border-b-2' : ''}
         to='/'>
