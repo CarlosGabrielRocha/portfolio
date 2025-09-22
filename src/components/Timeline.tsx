@@ -16,7 +16,7 @@ const TimelineTitle: React.FC<DefaultProps> = ({ className='', children }) => {
   return (
     <li className={`flex items-center gap-4 ${className}`}>
       <span className="w-3 h-3 rounded-full bg-white"></span>
-      <h1 className="font-medium sm:text-2xl md:text-2xl 2xl:text-3xl">{children}</h1>
+      <h1 className="font-medium text-lg sm:text-xl md:text-2xl 2xl:text-3xl">{children}</h1>
     </li>
   )
 }
