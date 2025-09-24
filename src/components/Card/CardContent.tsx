@@ -6,7 +6,7 @@ interface CardContentProps extends DefaultProps {
   btnProps: { href?: string }
 }
 
-const CardContent: React.FC<CardContentProps> = ({ children, className, btnProps }) => {
+const CardContent: React.FC<CardContentProps> = ({ children, className='', btnProps }) => {
   return (
     <div className={`flex flex-col items-center text-xs 2xl:text-md gap-5 font-light ${className}`}>
       { children }
@@ -17,7 +17,7 @@ const CardContent: React.FC<CardContentProps> = ({ children, className, btnProps
   )
 }
 
-const CardText: React.FC<DefaultProps> = ({ children, className }) => {
+const CardText: React.FC<DefaultProps> = ({ children, className='' }) => {
   return (
     <p className={`px-3 py-4 md:px-5 md:py-7 bg-darker-blue/50 ${className}`}>
       { children }

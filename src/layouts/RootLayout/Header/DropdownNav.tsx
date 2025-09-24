@@ -10,10 +10,17 @@ import {
 import Icon from "../../../components/icons/Icon"
 import { A } from "../../../components/A"
 import { useLocation } from "react-router-dom"
+import { useContext } from "react"
+import LayoutContext from "../../../contexts/LayoutContext"
 
 const DropdownNav: React.FC = () => {
+  const { contentSection } = useContext(LayoutContext)
   const location = useLocation().pathname
-  const selectedStyle = 'text-hlight-blue drop-shadow-md/50 drop-shadow-hlight-blue cursor-default'
+  const selectedStyle = 'text-hlight-blue drop-shadow-md/50 drop-shadow-hlight-blue'
+
+  const handleClick = () => {
+    contentSection?.current?.scrollIntoView()
+  }
 
   return (
     <DropdownMenu modal={false}>
@@ -31,7 +38,7 @@ const DropdownNav: React.FC = () => {
       </DropdownMenuTrigger>
       <DropdownMenuPortal>
         <DropdownMenuContent
-          className="flex flex-col gap-1 text-sm sm:text-md font-light p-3 mt-4 mr-3 bg-white/1 rounded-md md:hidden show-up"
+          className="flex flex-col gap-1 text-sm sm:text-md font-light p-3 mt-4 mr-3 bg-white/1 rounded-md md:hidden z-60 backdrop-blur-2xl show-up"
           loop
           side="left"
         >
@@ -43,7 +50,9 @@ const DropdownNav: React.FC = () => {
           >
             <A
               className={location === '/' ? selectedStyle : 'block w-full'}
-              to='/'>
+              to='/'
+              handler={handleClick}
+            >
               Experience
             </A>
           </DropdownMenuItem>
@@ -53,8 +62,9 @@ const DropdownNav: React.FC = () => {
             onSelect={(e) => e.preventDefault()}
           >
             <A
-              to="/stack"
               className={location === '/stack' ? selectedStyle : 'block w-full'}
+              to="/stack"
+              handler={handleClick}
             >
               Stack
             </A>
@@ -66,7 +76,9 @@ const DropdownNav: React.FC = () => {
           >
             <A
               className={location === '/education' ? selectedStyle : 'block w-full'}
-              to='/education'>
+              to='/education'
+              handler={handleClick}
+            >
               Education
             </A>
           </DropdownMenuItem>

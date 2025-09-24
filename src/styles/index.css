@@ -17,6 +17,16 @@
   }
 }
 
+@keyframes dessappear {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes to-orbit {
   0% {
     transform: translate(-5vw, 10rem) scale(.7);
@@ -101,7 +111,11 @@
 }
 
 .show-up {
-  animation: show-up 0.5s ease-in-out;
+  animation: show-up 0.4s ease-in-out;
+}
+
+.dessappear {
+  animation: dessappear 1s ease-in-out forwards;
 }
 
 .satellite {

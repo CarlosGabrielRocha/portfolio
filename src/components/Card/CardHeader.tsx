@@ -6,7 +6,7 @@ interface CardHeaderProps extends DefaultProps {
   alt: string
 }
 
-const CardHeader: React.FC<CardHeaderProps> = ({ children, className, src, alt }) => {
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className='', src, alt }) => {
   return (
     <div className={`pb-6 text-center border-b-2 border-white/20 ${className}`}>
       {children}
@@ -17,7 +17,7 @@ const CardHeader: React.FC<CardHeaderProps> = ({ children, className, src, alt }
   )
 }
 
-const CardTitle: React.FC<DefaultProps> = ({ children, className }) => {
+const CardTitle: React.FC<DefaultProps> = ({ children, className='' }) => {
   return (
     <Bold className={`text-md p-5 ${className}`}>
       {children}

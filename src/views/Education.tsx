@@ -1,9 +1,15 @@
 import SilverTitle from "../components/SilverTitle"
 import { Timeline, TimelineDate, TimelineText, TimelineTitle } from "../components/Timeline"
+import { motion } from "motion/react"
 
 const Education: React.FC = () => {
   return (
-    <div className="flex flex-col gap-25 w-full">
+    <motion.div 
+      className="flex flex-col gap-25 w-full"
+      initial={{ opacity: 0}}
+      animate={{ opacity: 1}}
+      transition={{ duration: 1, delay: 0.2}}
+    >
       <SilverTitle className="text-center">
         {'<Education />'}
       </SilverTitle>
@@ -30,7 +36,7 @@ const Education: React.FC = () => {
           <TimelineDate>2022-02/2024-08</TimelineDate>
         </Timeline>    
       </div>
-    </div>
+    </motion.div>
   )
 }
 
