@@ -17,7 +17,7 @@ interface ModalTriggerProps extends DefaultProps {
   modalProps: ModalProps
 }
 
-export const ModalTrigger: React.FC<ModalTriggerProps> = ({ modalProps, children, className }) => {
+export const ModalTrigger: React.FC<ModalTriggerProps> = ({ modalProps, children, className='' }) => {
   const [visible, setVisible] = useState(false)
 
   return (
