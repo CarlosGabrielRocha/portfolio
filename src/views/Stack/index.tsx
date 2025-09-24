@@ -1,12 +1,18 @@
 import AutoScrollCard from "../../components/AutoScrollCard"
 import Certificates from "./Certificates"
+import { motion } from "motion/react"
 
 const Stack: React.FC = () => {
   return (
-    <div className="flex flex-col items-center w-full px-3">
+    <motion.div 
+      className="flex flex-col items-center w-full px-3"
+      initial={{ opacity: 0}}
+      animate={{ opacity: 1}}
+      transition={{ duration: 1, delay: 0.2}}
+    >
       <AutoScrollCard />
       <Certificates />
-    </div>
+    </motion.div>
   )
 }
 
