@@ -1,28 +1,24 @@
 import type { DefaultProps } from "../../types/defaultTypes";
-import { Bold } from "../Bold";
 
-interface CardHeaderProps extends DefaultProps {
-  src: string
-  alt: string
-}
-
-const CardHeader: React.FC<CardHeaderProps> = ({ children, className='', src, alt }) => {
+const CardHeader: React.FC<DefaultProps> = ({ children, className = "" }) => {
   return (
-    <div className={`pb-6 text-center border-b-2 border-white/20 ${className}`}>
+    <div
+      className={`h-63 w-full p-6 text-center border-b-2 border-white/20 ${className}`}
+    >
       {children}
-      <div className="mx-auto w-2/3">
-        <img src={src} alt={alt} />
+      <div className="mx-auto w-2/3 h-45 opacity-10">
+        <img
+          className="w-full h-full"
+          src={"/icons/certificate-icon.svg"}
+          alt={"certificate"}
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
-const CardTitle: React.FC<DefaultProps> = ({ children, className='' }) => {
-  return (
-    <Bold className={`text-md p-5 ${className}`}>
-      {children}
-    </Bold>
-  )
-}
+const CardTitle: React.FC<DefaultProps> = ({ children }) => {
+  return <h1 className="font-medium text-md 2xl:text-lg">{children}</h1>;
+};
 
-export { CardHeader, CardTitle }
+export { CardHeader, CardTitle };

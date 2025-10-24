@@ -2,18 +2,18 @@ import type React from "react";
 import type { DefaultProps } from "../../types/defaultTypes";
 
 interface ExitProps extends DefaultProps {
-  action?: () => void
+  action?: () => void;
 }
 
-const Exit: React.FC<ExitProps> = ({ className='', action }) => {
+const Exit: React.FC<ExitProps> = ({ className = "", action }) => {
   return (
     <img
-      className={`cursor-pointer hover:opacity-85 w-4 md:w-6 2xl:w-8 ${className}`} 
-      src="/icons/close-icon.svg" 
+      className={`cursor-pointer hover:opacity-85 w-4 md:w-6 2xl:w-8 ${className}`}
+      src="/icons/close-icon.svg"
       alt="close"
       onClick={action}
     />
-  )
-}
+  );
+};
 
-export default Exit
+export default Exit;

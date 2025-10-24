@@ -1,28 +1,24 @@
-import type React from "react"
-import type { DefaultProps } from "../../types/defaultTypes"
-import Button from "../Button"
+import type React from "react";
+import type { DefaultProps } from "../../types/defaultTypes";
 
-interface CardContentProps extends DefaultProps {
-  btnProps: { href?: string }
-}
-
-const CardContent: React.FC<CardContentProps> = ({ children, className='', btnProps }) => {
+const CardContent: React.FC<DefaultProps> = ({ children, className = "" }) => {
   return (
-    <div className={`flex flex-col items-center text-xs 2xl:text-md gap-5 font-light ${className}`}>
-      { children }
-      <a href={btnProps.href} target="brank">
-        <Button className="py-1 text-xs drop-shadow-2xl/60 drop-shadow-white">View</Button>
-      </a>
+    <div
+      className={`flex flex-col items-center justify-between gap-5 w-full text-xs 2xl:text-md font-light ${className}`}
+    >
+      {children}
     </div>
-  )
-}
+  );
+};
 
-const CardText: React.FC<DefaultProps> = ({ children, className='' }) => {
+const CardText: React.FC<DefaultProps> = ({ children, className = "" }) => {
   return (
-    <p className={`px-3 py-4 md:px-5 md:py-7 bg-darker-blue/50 ${className}`}>
-      { children }
+    <p
+      className={`w-full px-3 py-4 md:px-5 md:py-7 bg-darker-blue/50 ${className}`}
+    >
+      {children}
     </p>
-  )
-}
+  );
+};
 
-export { CardContent, CardText }
+export { CardContent, CardText };

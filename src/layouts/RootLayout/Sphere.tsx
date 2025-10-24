@@ -1,9 +1,9 @@
-import type { ReactNode } from "react"
-import Button from "../../components/Button"
-import Icon from "../../components/icons/Icon"
+import type { ReactNode } from "react";
+import Button from "../../components/Button";
+import Icon from "../../components/icons/Icon";
 
 interface SphereProps {
-  children?: ReactNode
+  children?: ReactNode;
 }
 
 const Sphere: React.FC<SphereProps> = () => {
@@ -16,7 +16,7 @@ const Sphere: React.FC<SphereProps> = () => {
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sphere
+export default Sphere;
