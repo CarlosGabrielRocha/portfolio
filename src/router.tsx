@@ -11,18 +11,18 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Experience />
+        element: <Experience />,
       },
       {
-        path: 'stack',
-        element: <Stack />
+        path: "stack",
+        element: <Stack />,
       },
       {
-        path: 'education',
-        element: <Education />
-      }
-    ]
-  }
-])
+        path: "education",
+        element: <Education />,
+      },
+    ],
+  },
+]);
 
-export default router
+export default router;

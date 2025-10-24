@@ -1,9 +1,9 @@
-import { createContext } from "react"
+import { createContext } from "react";
 
 interface LayoutContextValue {
-  contentSection: React.RefObject<HTMLElement | null> 
+  contentSection: React.RefObject<HTMLElement | null>;
 }
 
-const LayoutContext = createContext({} as LayoutContextValue)
+const LayoutContext = createContext({} as LayoutContextValue);
 
-export default LayoutContext
+export default LayoutContext;

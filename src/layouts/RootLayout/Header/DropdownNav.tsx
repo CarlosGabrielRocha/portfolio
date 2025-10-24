@@ -1,26 +1,27 @@
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuLabel, 
-  DropdownMenuPortal, 
-  DropdownMenuSeparator, 
-  DropdownMenuTrigger 
-} from "@radix-ui/react-dropdown-menu"
-import Icon from "../../../components/icons/Icon"
-import { A } from "../../../components/A"
-import { useLocation } from "react-router-dom"
-import { useContext } from "react"
-import LayoutContext from "../../../contexts/LayoutContext"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@radix-ui/react-dropdown-menu";
+import Icon from "../../../components/icons/Icon";
+import { A } from "../../../components/A";
+import { useLocation } from "react-router-dom";
+import { useContext } from "react";
+import LayoutContext from "../../../contexts/LayoutContext";
 
 const DropdownNav: React.FC = () => {
-  const { contentSection } = useContext(LayoutContext)
-  const location = useLocation().pathname
-  const selectedStyle = 'text-hlight-blue drop-shadow-md/50 drop-shadow-hlight-blue'
+  const { contentSection } = useContext(LayoutContext);
+  const location = useLocation().pathname;
+  const selectedStyle =
+    "text-hlight-blue drop-shadow-md/50 drop-shadow-hlight-blue";
 
   const handleClick = () => {
-    contentSection?.current?.scrollIntoView()
-  }
+    contentSection?.current?.scrollIntoView();
+  };
 
   return (
     <DropdownMenu modal={false}>
@@ -42,15 +43,17 @@ const DropdownNav: React.FC = () => {
           loop
           side="left"
         >
-          <DropdownMenuLabel className="opacity-40">Navigation Menu</DropdownMenuLabel>
+          <DropdownMenuLabel className="opacity-40">
+            Navigation Menu
+          </DropdownMenuLabel>
           <DropdownMenuSeparator className="h-px bg-white/5" />
           <DropdownMenuItem
             className="py-1 px-2 outline-none hover:text-hlight-blue"
             onSelect={(e) => e.preventDefault()}
           >
             <A
-              className={location === '/' ? selectedStyle : 'block w-full'}
-              to='/'
+              className={location === "/" ? selectedStyle : "block w-full"}
+              to="/"
               handler={handleClick}
             >
               Experience
@@ -62,7 +65,7 @@ const DropdownNav: React.FC = () => {
             onSelect={(e) => e.preventDefault()}
           >
             <A
-              className={location === '/stack' ? selectedStyle : 'block w-full'}
+              className={location === "/stack" ? selectedStyle : "block w-full"}
               to="/stack"
               handler={handleClick}
             >
@@ -75,8 +78,10 @@ const DropdownNav: React.FC = () => {
             onSelect={(e) => e.preventDefault()}
           >
             <A
-              className={location === '/education' ? selectedStyle : 'block w-full'}
-              to='/education'
+              className={
+                location === "/education" ? selectedStyle : "block w-full"
+              }
+              to="/education"
               handler={handleClick}
             >
               Education
@@ -85,7 +90,7 @@ const DropdownNav: React.FC = () => {
         </DropdownMenuContent>
       </DropdownMenuPortal>
     </DropdownMenu>
-  )
-}
+  );
+};
 
-export default DropdownNav
+export default DropdownNav;

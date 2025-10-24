@@ -46,7 +46,7 @@ const MyParticles: React.FC = () => {
         shadow: {
           color: "#ffffff",
           blur: 8,
-          enable: true
+          enable: true,
         },
         move: {
           direction: MoveDirection.none,
@@ -65,7 +65,7 @@ const MyParticles: React.FC = () => {
           value: 10,
         },
         opacity: {
-          value: .6,
+          value: 0.6,
         },
         shape: {
           type: "circle",
@@ -76,7 +76,7 @@ const MyParticles: React.FC = () => {
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
 
   if (init) {
@@ -92,4 +92,4 @@ const MyParticles: React.FC = () => {
   return <></>;
 };
 
-export default MyParticles
+export default MyParticles;

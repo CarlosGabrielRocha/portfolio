@@ -1,11 +1,11 @@
-import { useContext } from "react"
-import type { DefaultProps } from "../../types/defaultTypes"
-import { Bold } from "../Bold"
-import Exit from "../icons/Exit"
-import ModalContext from "../../contexts/ModalContext"
+import { useContext } from "react";
+import type { DefaultProps } from "../../types/defaultTypes";
+import { Bold } from "../Bold";
+import Exit from "../icons/Exit";
+import ModalContext from "../../contexts/ModalContext";
 
 const ModalHeader: React.FC<DefaultProps> = ({ children }) => {
-  const { setVisible } = useContext(ModalContext)
+  const { setVisible } = useContext(ModalContext);
 
   return (
     <div className="flex justify-between items-center py-2 px-3 md:py-3 md:px-4">
@@ -14,7 +14,7 @@ const ModalHeader: React.FC<DefaultProps> = ({ children }) => {
       </Bold>
       <Exit action={() => setVisible(false)} />
     </div>
-  )
-}
+  );
+};
 
-export default ModalHeader
+export default ModalHeader;

@@ -119,7 +119,7 @@
 }
 
 .satellite {
-  animation: to-orbit 40s linear infinite;
+  animation: to-orbit 30s linear infinite;
 }
 
 /*  Media queries  */
