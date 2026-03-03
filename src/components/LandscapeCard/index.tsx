@@ -57,7 +57,7 @@ const LandscapeText: React.FC<DefaultProps> = ({
   className = "",
 }) => {
   return (
-    <Light className={`max-sm:text-[0.6rem] max-sm:text-center ${className}`}>
+    <Light className={`max-sm:text-sm max-sm:text-center ${className}`}>
       {children}
     </Light>
   );
