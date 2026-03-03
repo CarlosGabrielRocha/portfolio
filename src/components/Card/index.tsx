@@ -15,7 +15,7 @@ const Card: React.FC<CardProps> = ({ children, btnProps, className = "" }) => {
     >
       {children}
       <Button
-        className={`py-2 w-25 text-xs drop-shadow-2xl/60 drop-shadow-white ${
+        className={`py-2 w-25 text-sm drop-shadow-2xl/60 drop-shadow-white ${
           btnProps ?? "opacity-50 pointer-events-none"
         }`}
         href={btnProps?.href}

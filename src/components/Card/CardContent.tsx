@@ -4,7 +4,7 @@ import type { DefaultProps } from "../../types/defaultTypes";
 const CardContent: React.FC<DefaultProps> = ({ children, className = "" }) => {
   return (
     <div
-      className={`flex flex-col items-center justify-between gap-5 w-full text-xs 2xl:text-md font-light ${className}`}
+      className={`flex flex-col items-center justify-between gap-5 w-full text-sm 2xl:text-md font-light ${className}`}
     >
       {children}
     </div>
