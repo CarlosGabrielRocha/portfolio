@@ -1,7 +1,7 @@
 import Sphere from "./Sphere";
 import Title from "../../components/Title";
 import Satellite from "./Satellite";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const PresentationSection: React.FC = () => {
   const { t } = useTranslation();
@@ -12,7 +12,7 @@ const PresentationSection: React.FC = () => {
       id="presentation"
     >
       <Title className="text-center mx-auto my-30 2xl:my-48 w-fit">
-        <Trans t={t} i18nKey="presentation.title" components={{ br: <br /> }} />
+        {t("presentation.title")}
       </Title>
       <Satellite />
       <Sphere />
