@@ -10,12 +10,10 @@ const Sphere: React.FC<SphereProps> = () => {
   return (
     <div className="sphere-container w-full">
       <div className="sphere flex items-start justify-center h-screen bg-black">
-        <a href="/curriculo-carlos-gabriel.pdf" download={true}>
-          <Button className="mt-20 max-md:text-xs 2xl:text-lg">
-            <Icon src="/icons/download-icon.svg" alt="download" />
-            Download CV
-          </Button>
-        </a>
+        <Button className="mt-20 max-md:text-xs 2xl:text-lg" href="/curriculo-carlos-gabriel.pdf" download={true}>
+          <Icon src="/icons/download-icon.svg" alt="download" />
+          Download CV
+        </Button>
       </div>
     </div>
   );

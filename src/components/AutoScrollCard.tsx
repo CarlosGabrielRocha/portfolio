@@ -1,11 +1,15 @@
 import type { DefaultProps } from "../types/defaultTypes";
 import { Badge } from "./Badge";
 import SilverTitle from "./SilverTitle";
+import { useTranslation } from "react-i18next";
 
 const AutoScrollCard: React.FC<DefaultProps> = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-full max-w-2xl bg-tranparent-white backdrop-blur-md spread-shadow-center rounded-3xl">
-      <SilverTitle className="text-center p-3 md:p-6">Stack</SilverTitle>
+      <SilverTitle className="text-center p-3 md:p-6">
+        {t("navbar.stack")}
+      </SilverTitle>
       <div
         className="w-full overflow-x-hidden bg-gradient-to-r from-black/7 to-hlight-blue/7 
       to-60% rounded-3xl border-1"

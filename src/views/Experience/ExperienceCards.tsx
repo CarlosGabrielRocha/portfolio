@@ -4,10 +4,49 @@ import {
   LandscapeText,
   LandscapeTitle,
 } from "../../components/LandscapeCard";
+import { useTranslation } from "react-i18next";
 
 const ExperienceCards: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-20 items-center justify-center mt-20">
+      <ModalTrigger
+        modalProps={{
+          name: "real state",
+          deploy: {
+            imgSrc: "/images/real-state-deploy.webp",
+            imgAlt: "Real state deploy",
+            href: "https://reginacaeli.vercel.app",
+          },
+          planning: {
+            imgSrc: "/images/real-state-figma.webp",
+            imgAlt: "Real state figms",
+            href: "https://www.figma.com/design/mu0n1AG86y6UEoTXJ5LOwM/Untitled?node-id=0-1&p=f&t=o63WivgXdwJxNjDm-0",
+          },
+        }}
+      >
+        <LandscapeCard
+          imgSrc="/images/real-state-deploy.webp"
+          imgAlt="projeto corretor"
+          badges={["tailwind", "ts", "express", "node", "prisma"]}
+        >
+          <LandscapeTitle>{t("experience.progressTitle")}</LandscapeTitle>
+          <LandscapeText>{t("experience.progressDesc1")}</LandscapeText>
+          <LandscapeText>{t("experience.progressDesc2")}</LandscapeText>
+        </LandscapeCard>
+      </ModalTrigger>
+      <ModalTrigger
+        modalProps={{
+          name: "supermarket API",
+          sourceCodeHref:
+            "https://github.com/CarlosGabrielRocha/api-supermarket",
+        }}
+      >
+        <LandscapeCard badges={["express", "ts", "node"]}>
+          <LandscapeTitle>{t("experience.supermarketTitle")}</LandscapeTitle>
+          <LandscapeText>{t("experience.supermarketDesc")}</LandscapeText>
+        </LandscapeCard>
+      </ModalTrigger>
       <ModalTrigger
         modalProps={{
           name: "Portfolio",
@@ -29,52 +68,10 @@ const ExperienceCards: React.FC = () => {
           imgAlt="Carlos Gabriel Portfolio"
           badges={["react", "ts", "tailwind"]}
         >
-          <LandscapeTitle>Portfolio</LandscapeTitle>
-          <LandscapeText>
-            The interface combines subtle animations, dark tones, and luminous
-            details inspired by the universe and the stars to create an engaging
-            visual experience. The website showcases my journey as a developer,
-            completed projects, and contact options, all within a responsive and
-            optimized layout, built with typed and scalable code.
-          </LandscapeText>
+          <LandscapeTitle>{t("experience.portfolioTitle")}</LandscapeTitle>
+          <LandscapeText>{t("experience.portfolioDesc")}</LandscapeText>
         </LandscapeCard>
       </ModalTrigger>
-
-      <ModalTrigger
-        modalProps={{
-          name: "supermarket API",
-          sourceCodeHref:
-            "https://github.com/CarlosGabrielRocha/api-supermarket",
-        }}
-      >
-        <LandscapeCard badges={["express", "ts", "node"]}>
-          <LandscapeTitle>Supermarket API</LandscapeTitle>
-          <LandscapeText>
-            REST API for a supermarket application, built using the MVC
-            architecture pattern. It includes token-based authentication and
-            role-based authorization for protected routes.
-          </LandscapeText>
-        </LandscapeCard>
-      </ModalTrigger>
-
-      <LandscapeCard
-        imgSrc="/images/real-state-deploy.webp"
-        imgAlt="projeto corretor"
-        badges={["bootstrap", "ts", "express", "node", "prisma"]}
-      >
-        <LandscapeTitle>Project in progress</LandscapeTitle>
-        <LandscapeText>
-          An application developed for a real estate promotion company, designed
-          to streamline property management and client interactions. The main
-          goal is to increase sales by up to 200% after launch.
-        </LandscapeText>
-        <LandscapeText>
-          The platform will feature user authentication, contact options for
-          team members, an administration panel, a dashboard, guides, and a
-          document digitization area. All built in full compliance with the LGPD
-          (Brazilian General Data Protection Law).
-        </LandscapeText>
-      </LandscapeCard>
     </div>
   );
 };

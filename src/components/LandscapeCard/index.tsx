@@ -28,14 +28,12 @@ const LandscapeCard: React.FC<LandscapeProps> = ({
             })}
         </div>
       </LandscapeContent>
-      <div className="max-sm:order-1 flex-1 h-37  w-6/10 sm:w-full my-auto mx-auto shadow-center bg-black/20">
-        {imgSrc && (
-          <img
-            className="h-full w-full object-cover opacity-50 drop-shadow-lg/15"
-            src={imgSrc}
-            alt={imgAlt}
-          />
-        )}
+      <div className="max-sm:order-1 flex-1 sm:flex-2 h-37 sm:h-45 lg:h-53 2xl:h-58 3xl:h-64 w-6/10 sm:w-full my-auto mx-auto shadow-center bg-black/20">
+        <img
+          className="h-full w-full object-cover opacity-50 drop-shadow-lg/15"
+          src={imgSrc ?? "/images/placeholder-image.webp"}
+          alt={imgAlt ?? "placeholder"}
+        />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ interface ButtonProps {
   className?: string;
   href?: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
+  download?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -12,10 +13,11 @@ const Button: React.FC<ButtonProps> = ({
   href,
   target,
   className = "",
+  download,
 }) => {
   const styles = `flex justify-center gap-2 min-w-20 p-3 border-1 rounded-3xl text-sm shadow-md shadow-hlight-blue cursor-pointer font-medium hover:opacity-75 active:border-hlight-blue ${className}`;
   return (
-    <a href={href} target={target} className={styles}>
+    <a href={href} target={target} className={styles} download={download}>
       {children}
     </a>
   );

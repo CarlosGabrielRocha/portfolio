@@ -116,7 +116,7 @@ const badgeProps: BadgePropsType = {
 
 interface BadgeProps extends DefaultProps {
   type: BadgeType;
-  size?: "small" | "medium" | "big";
+  size?: "small" | "medium" | "big" | "responsive";
 }
 
 export const Badge: React.FC<BadgeProps> = ({ type, size, className = "" }) => {
@@ -127,7 +127,7 @@ export const Badge: React.FC<BadgeProps> = ({ type, size, className = "" }) => {
 
   return (
     <div className={styles}>
-      <Icon size={size} src={badge.iconSrc} alt={badge.alt} />
+      <Icon size={size ?? "responsive"} src={badge.iconSrc} alt={badge.alt} />
     </div>
   );
 };

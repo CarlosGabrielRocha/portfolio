@@ -9,7 +9,7 @@ interface CardProps extends DefaultProps {
 const Card: React.FC<CardProps> = ({ children, btnProps, className = "" }) => {
   return (
     <motion.div
-      className={`flex flex-col justify-between items-center flex-1 gap-2 md:gap-5 min-w-73 max-w-83 min-h-125 pb-5 bg-gradient-to-b from-black/10 to-hlight-blue/10 rounded-2xl border-1 shadow-center ${className}`}
+      className={`flex flex-col justify-between items-center flex-1 gap-2 md:gap-5 min-w-69 sm:min-w-73 max-w-83 min-h-125 pb-5 bg-gradient-to-b from-black/10 to-hlight-blue/10 rounded-2xl border-1 shadow-center ${className}`}
       whileHover={{ translateY: "-1rem" }}
       transition={{ type: "spring", duration: 0.5, stiffness: 120 }}
     >

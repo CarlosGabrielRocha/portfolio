@@ -1,7 +1,7 @@
 interface IconProps {
   src: string;
   alt: string;
-  size?: "small" | "medium" | "big";
+  size?: "small" | "medium" | "big" | "responsive";
   className?: string;
 }
 
@@ -9,6 +9,7 @@ enum IconSize {
   small = "w-4",
   medium = "w-7",
   big = "w-10",
+  responsive = "w-5 md:w-6",
 }
 
 const Icon: React.FC<IconProps> = ({ src, alt, size, className = "" }) => {
