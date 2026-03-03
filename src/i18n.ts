@@ -30,7 +30,7 @@ const en = {
     language: "Language",
   },
   presentation: {
-    title: "Turning ideas into <br /> real world apps",
+    title: "Carlos Gabriel Full Stack Developer",
   },
   about: {
     title: "About Me",
@@ -86,7 +86,7 @@ const ptBR = {
     language: "Idioma",
   },
   presentation: {
-    title: "Transformando ideias em <br /> soluções reais",
+    title: "Carlos Gabriel Desenvolvedor Full Stack",
   },
   about: {
     title: "Sobre Mim",
