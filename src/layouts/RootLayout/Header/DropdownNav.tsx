@@ -18,7 +18,10 @@ import React, { useContext } from "react";
 import LayoutContext from "../../../contexts/LayoutContext";
 import { useTranslation } from "react-i18next";
 
-const DropdownNav: React.FC<{ open: boolean, setOpen: (open: boolean) => void }> = ({ open, setOpen }) => {
+const DropdownNav: React.FC<{
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}> = ({ open, setOpen }) => {
   const { t, i18n } = useTranslation();
   const { contentSection } = useContext(LayoutContext);
   const location = useLocation().pathname;
@@ -30,18 +33,18 @@ const DropdownNav: React.FC<{ open: boolean, setOpen: (open: boolean) => void }>
       <span>{t("navbar.language")}</span>
       <Icon
         src={
-          i18n.language === "en"
+          i18n.resolvedLanguage === "en"
             ? "/icons/english-icon.svg"
             : "/icons/ptbr-icon.svg"
         }
-        alt={i18n.language === "en" ? "English" : "PT-BR"}
+        alt={i18n.resolvedLanguage === "en" ? "English" : "PT-BR"}
       />
     </div>
   );
 
   const englishJsx = (
     <div
-      className={`flex items-center gap-2 cursor-pointer ${i18n.language === "en" ? selectedStyle : ""}`}
+      className={`flex items-center gap-2 cursor-pointer ${i18n.resolvedLanguage === "en" ? selectedStyle : ""}`}
     >
       <span>{t("navbar.en")}</span>
       <Icon src="/icons/english-icon.svg" alt="English" />
@@ -50,7 +53,7 @@ const DropdownNav: React.FC<{ open: boolean, setOpen: (open: boolean) => void }>
 
   const ptbrJsx = (
     <div
-      className={`flex items-center gap-2 cursor-pointer ${i18n.language === "ptBR" ? selectedStyle : ""}`}
+      className={`flex items-center gap-2 cursor-pointer ${i18n.resolvedLanguage === "ptBR" ? selectedStyle : ""}`}
     >
       <span>{t("navbar.ptBR")}</span>
       <Icon src="/icons/ptbr-icon.svg" alt="PT-BR" />
@@ -63,7 +66,10 @@ const DropdownNav: React.FC<{ open: boolean, setOpen: (open: boolean) => void }>
 
   return (
     <DropdownMenu modal={false} open={open}>
-      <DropdownMenuTrigger className="cursor-pointer outline-none" onClick={() => setOpen(true)}>
+      <DropdownMenuTrigger
+        className="cursor-pointer outline-none"
+        onClick={() => setOpen(true)}
+      >
         <div
           className="rounded-full bg-darker-blue shadow-md shadow-hlight-blue hover:shadow-md/30 w-fit p-2"
           aria-label="Navigation Menu"
