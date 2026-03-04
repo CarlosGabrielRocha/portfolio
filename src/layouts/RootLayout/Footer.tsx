@@ -29,6 +29,11 @@ const Footer: React.FC = () => {
             href="https://github.com/CarlosGabrielRocha"
             alt="Github"
           />
+          <IconLink
+            iconSrc="/icons/linkedin-icon.svg"
+            href="https://www.linkedin.com/in/carlosgabriel-dev/"
+            alt="Linkedin"
+          />
         </div>
         <div className="w-fit max-w-full">
           <Bold className="mb-3 px-3">{t("footer.email")}</Bold>
