@@ -23,6 +23,7 @@ const ExperienceCards: React.FC = () => {
             imgAlt: "Real state figms",
             href: "https://www.figma.com/design/mu0n1AG86y6UEoTXJ5LOwM/Untitled?node-id=0-1&p=f&t=o63WivgXdwJxNjDm-0",
           },
+          sourceCodeHref: "https://github.com/CarlosGabrielRocha/regina-caeli"
         }}
       >
         <LandscapeCard
